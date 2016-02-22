@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.envy.toolbars_and_menus_hw.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#19317c">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PANDORA"
+            android:textColor="#FFFFFF" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+        <android.support.v7.widget.Toolbar
+            android:background="#19317c"
+            android:id="@+id/toolbarButtons"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            app:contentInsetStart="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/time_elapsed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:text="0:00"
+                        android:layout_alignParentLeft="true"/>
+
+                    <SeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/time_remaining"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0:00"
+                        android:textColor="#ffffff"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/button_thumpsup"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_thumbup"
+                        android:background="#19317c"
+                        android:layout_margin="1dp"/>
+
+                    <ImageView
+                        android:id="@+id/button_thumpsdown"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_thumbdown"
+                        android:background="#19317c"
+                        android:layout_margin="1dp"/>
+
+
+                    <ImageView
+                        android:id="@+id/button_play"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_play"
+                        android:background="#19317c"
+                        android:layout_margin="1dp"/>
+
+                    <ImageView
+                        android:id="@+id/button_skip"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_skip"
+                        android:background="#19317c"
+                        android:layout_margin="1dp"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+
+</RelativeLayout>
